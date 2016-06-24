@@ -1714,7 +1714,7 @@ public class TokenMgtDAO {
             String sql = SQLQueries.RETRIEVE_TOKEN_ID_BY_TOKEN;
 
             prepStmt = connection.prepareStatement(sql);
-            prepStmt.setString(1, persistenceProcessor.getProcessedAccessTokenIdentifier(token));
+            prepStmt.setString(1, token);
             resultSet = prepStmt.executeQuery();
 
             if (resultSet.next()) {
